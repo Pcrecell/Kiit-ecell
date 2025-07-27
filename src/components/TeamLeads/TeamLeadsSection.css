@@ -1,0 +1,41 @@
+/* Moving gradient background with black-based palette */
+.bg-gradient-move {
+  background: linear-gradient(-45deg, #000000, #111111, #1a1a1a, #2a2a2a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Binary code overlay effect */
+.binary-overlay::before {
+  content: "0101010101010010101010101001010010100101010101010010101010";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  white-space: pre;
+  color: rgba(255, 255, 255, 0.02); /* Slightly less bright for subtlety */
+  font-size: 20px;
+  font-family: monospace;
+  line-height: 1.2;
+  background-size: 100% 200%;
+  animation: scrollBinary 20s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Background animation keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes scrollBinary {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

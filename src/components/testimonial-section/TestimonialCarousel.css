@@ -1,0 +1,214 @@
+/* Testimonial Carousel Styles */
+.testimonial-carousel {
+  position: relative;
+}
+
+/* Smooth slide transitions - Higher specificity */
+.testimonial-carousel .testimonial-slide {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  will-change: transform;
+}
+
+/* Ensure slide container transforms properly */
+.testimonial-carousel .testimonial-slide {
+  transform: translateX(var(--slide-offset, 0));
+}
+
+/* Card hover effects - Only on desktop */
+.testimonial-card {
+  transition: all 0.3s ease;
+  will-change: transform, box-shadow, border-color;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .testimonial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+}
+
+.hide-carousel {
+  overflow: auto;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* Internet Explorer 10+ */
+}
+
+.hide-carousel::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, Edge */
+}
+
+
+/* Navigation button hover effects */
+.nav-button {
+  transition: all 0.2s ease;
+  will-change: transform, box-shadow;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+/* Pagination dots animation */
+.pagination-dot {
+  transition: all 0.2s ease;
+  will-change: transform, background-color;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pagination-dot:hover {
+    transform: scale(1.2);
+  }
+}
+
+.pagination-dot.active {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Progress bar animation */
+.progress-bar {
+  transition: width 4s linear;
+  will-change: width;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-height: 280px;
+  }
+  
+  .nav-button {
+    padding: 0.5rem;
+  }
+  
+  .nav-button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Ensure mobile slides work properly */
+  .testimonial-carousel .testimonial-slide {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .testimonial-card {
+    min-height: 320px;
+  }
+  
+  /* Ensure tablet slides work properly */
+  .testimonial-carousel .testimonial-slide {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+}
+
+/* Remove hover effects on touch devices but keep transitions */
+@media (hover: none) {
+  .testimonial-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: initial;
+  }
+  
+  .nav-button:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .pagination-dot:hover {
+    transform: none;
+  }
+  
+  /* But keep slide transitions working */
+  .testimonial-carousel .testimonial-slide {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+}
+
+/* Smooth entrance animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testimonial-carousel {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Text fade-in animation */
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testimonial-card .text-content {
+  animation: textFadeIn 0.8s ease-out 0.2s both;
+}
+
+.testimonial-card .author-content {
+  animation: textFadeIn 0.8s ease-out 0.4s both;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-carousel .testimonial-slide,
+  .testimonial-card,
+  .nav-button,
+  .pagination-dot,
+  .progress-bar {
+    transition: none !important;
+  }
+  
+  .pagination-dot.active {
+    animation: none;
+  }
+  
+  .testimonial-carousel {
+    animation: none;
+  }
+  
+  .testimonial-card .text-content,
+  .testimonial-card .author-content {
+    animation: none;
+  }
+}
+
+/* Force hardware acceleration for better performance */
+.testimonial-carousel .testimonial-slide,
+.testimonial-card,
+.nav-button,
+.pagination-dot {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

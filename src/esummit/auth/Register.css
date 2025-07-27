@@ -1,0 +1,262 @@
+.register-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f2f5; /* Very light grey background */
+  }
+  
+  .left-artwork {
+    background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%); /* Attractive gradient */
+    color: white;
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    animation: slideInLeft 0.8s ease-out; /* Initial animation */
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .logo span:first-child {
+    color: #fff;
+  }
+  
+  .logo span:last-child {
+    color: #fdd835; /* Yellow accent */
+  }
+  
+  .artwork-content {
+    text-align: center;
+  }
+  
+  .artwork-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .artwork-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+  
+  .register-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    animation: fadeIn 0.8s ease-out; /* Initial animation */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .form-wrapper {
+    background-color: white;
+    padding: 2.5rem; /* Slightly reduce padding */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Keep a reasonable max width */
+  }
+  
+  .register-container h2 {
+    font-size: 2rem; /* Slightly reduce heading size */
+    color: #333;
+    margin-bottom: 2rem; /* Slightly reduce margin */
+    text-align: center;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #d32f2f;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1.75rem; /* Slightly reduce margin */
+  }
+  
+  .form-group label {
+    display: block;
+    color: #555;
+    margin-bottom: 0.5rem; /* Slightly reduce margin */
+    font-weight: bold;
+    font-size: 0.95rem; /* Slightly reduce label size */
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 1rem; /* Slightly reduce padding */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    color: #333; /* Ensure password text is visible */
+  }
+  
+  .form-group input::placeholder {
+    color: #aaa; /* Slightly darker placeholder */
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #36d1dc;
+    box-shadow: 0 0 8px rgba(54, 209, 220, 0.3);
+  }
+  
+  .register-button {
+    padding: 1rem 1.2rem; /* Slightly reduce button padding */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem; /* Slightly reduce button font size */
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+  }
+  
+  .register-button:hover {
+    background: linear-gradient(to right, #5b86e5, #36d1dc); /* Reverse gradient on hover */
+    transform: scale(1.02);
+  }
+  
+  .register-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: scale(1);
+  }
+  
+  .auth-footer {
+    margin-top: 2rem; /* Slightly reduce margin */
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem; /* Slightly reduce font size */
+  }
+  
+  .auth-footer a {
+    color: #36d1dc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .auth-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 960px) {
+    .register-page {
+      flex-direction: column;
+    }
+  
+    .left-artwork {
+      flex: 0;
+      padding: 3rem; /* Adjust padding */
+      min-height: 35vh; /* Slightly reduce min-height */
+      animation: slideInTop 0.8s ease-out;
+    }
+  
+    @keyframes slideInTop {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  
+    .register-container {
+      padding: 2rem; /* Adjust padding */
+    }
+  
+    .form-wrapper {
+      max-width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .left-artwork {
+      padding: 1.5rem;
+      min-height: 25vh; /* Further reduce min-height */
+    }
+  
+    .logo {
+      font-size: 2.2rem; /* Slightly reduce logo size */
+      margin-bottom: 1.2rem; /* Slightly reduce margin */
+    }
+  
+    .artwork-content h2 {
+      font-size: 1.8rem; /* Slightly reduce heading size */
+    }
+  
+    .artwork-content p {
+      font-size: 0.95rem; /* Slightly reduce paragraph size */
+    }
+  
+    .register-container h2 {
+      font-size: 1.8rem; /* Slightly reduce heading size */
+      margin-bottom: 1.75rem; /* Slightly reduce margin */
+    }
+  
+    .form-group {
+      margin-bottom: 1.5rem; /* Slightly reduce margin */
+    }
+  
+    .form-group label {
+      font-size: 0.9rem;
+    }
+  
+    .form-group input {
+      padding: 0.9rem; /* Slightly reduce padding */
+      font-size: 0.9rem;
+    }
+  
+    .register-button {
+      font-size: 0.95rem; /* Slightly reduce button font size */
+      padding: 0.9rem 1.1rem; /* Slightly reduce button padding */
+    }
+  
+    .auth-footer {
+      font-size: 0.8rem;
+      margin-top: 1.75rem; /* Slightly reduce margin */
+    }
+  }

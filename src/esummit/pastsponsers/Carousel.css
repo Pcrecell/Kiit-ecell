@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Carousel container */
+.carousel-container {
+  position: relative; /* Ensures children with absolute positioning are bound */
+  width: 35%; /* Full width */
+  height: 50vh; /* Adjust height as needed */
+  overflow: hidden; /* Prevent content overflow */
+  margin-top: 5vh;
+}
+
+/* Individual slide */
+.carousel-slide {
+  position: absolute; /* Absolutely positioned within the carousel container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image styles */
+.carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures the image scales while maintaining aspect ratio */
+}
+
+/* Row container */
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Ensure spacing between components */
+  align-items: center;
+  gap: 20px; /* Adds spacing between items */
+  padding: 0 10px; /* Adds padding on the sides */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .carousel-container {
+    height: 45vh; /* Reduce height for smaller screens */
+    margin-top: 12vh;
+    width: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack components vertically */
+    justify-content: center;
+    align-items: center; /* Center items */
+  }
+
+  .carousel-container {
+    height: 40vh; /* Reduce height further */
+    margin-top: 10vh;
+    width: 35%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 35vh; /* Smaller height for mobile */
+    margin-top: 8vh;
+    width: 35%;
+  }
+
+  .row {
+    gap: 10px; /* Reduce spacing for smaller screens */
+  }
+}

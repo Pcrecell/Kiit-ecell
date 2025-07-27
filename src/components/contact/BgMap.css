@@ -1,0 +1,186 @@
+.custom-popup .leaflet-popup-content-wrapper {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15) !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+.custom-popup .leaflet-popup-content {
+  padding: 8px 12px !important;
+  margin: 0 !important;
+  font-size: 12px !important;
+}
+
+.custom-popup .leaflet-popup-tip {
+  background: #f8f9fa !important;
+}
+
+.custom-popup .leaflet-popup-close-button {
+  color: #6c757d !important;
+  padding: 4px 4px 0 0 !important;
+  font-size: 16px !important;
+}
+
+.custom-popup .leaflet-popup-close-button:hover {
+  color: #212529 !important;
+}
+
+/* Responsive popup styling */
+@media (min-width: 768px) {
+  .custom-popup .leaflet-popup-content {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+  }
+  
+  .custom-popup .leaflet-popup-close-button {
+    font-size: 18px !important;
+  }
+}
+
+/* Mobile-specific map adjustments */
+@media (max-width: 767px) {
+  .leaflet-container {
+    font-size: 12px !important;
+    touch-action: pan-x pan-y !important;
+  }
+  
+  .leaflet-control-container {
+    display: none !important;
+  }
+  
+  .custom-popup .leaflet-popup-content-wrapper {
+    max-width: 250px !important;
+  }
+}
+
+/* Disable map interactions for background use */
+.leaflet-container {
+  touch-action: pan-x pan-y !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  cursor: grab !important;
+}
+
+/* Prevent unwanted drag behavior */
+.leaflet-container {
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+}
+
+/* Ensure dragging stops on release */
+.leaflet-container.leaflet-drag-target {
+  cursor: grabbing !important;
+}
+
+/* Fix for better drag control */
+.leaflet-dragging {
+  cursor: grabbing !important;
+}
+
+/* Keep popup interactive */
+.leaflet-popup-pane {
+  pointer-events: auto !important;
+}
+
+.leaflet-popup-pane * {
+  pointer-events: auto !important;
+  cursor: auto !important;
+}
+
+/* Allow marker and popup interactions */
+.leaflet-marker-pane {
+  pointer-events: auto !important;
+}
+
+.leaflet-marker-icon {
+  pointer-events: auto !important;
+}
+
+.leaflet-marker-shadow {
+  pointer-events: none !important;
+}
+
+.leaflet-container .leaflet-control-zoom {
+  display: none !important;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  display: none !important;
+}
+
+/* Prevent map dragging issues */
+.leaflet-container.leaflet-touch .leaflet-bar {
+  border: none !important;
+}
+
+.leaflet-container.leaflet-touch .leaflet-control-layers {
+  border: none !important;
+}
+
+/* Fix dragging behavior */
+.leaflet-grab {
+  cursor: grab !important;
+}
+
+.leaflet-grabbing {
+  cursor: grabbing !important;
+}
+
+/* Ensure proper cursor states */
+.leaflet-container.leaflet-grab {
+  cursor: grab !important;
+}
+
+.leaflet-container.leaflet-grabbing {
+  cursor: grabbing !important;
+}
+
+/* Prevent selection while dragging */
+.leaflet-container * {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Prevent text selection during drag */
+.leaflet-container.leaflet-dragging * {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* Allow text selection in popups */
+.leaflet-popup-content * {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+/* When dragging is disabled */
+.leaflet-container.dragging-disabled {
+  cursor: default !important;
+}
+
+.leaflet-container.dragging-disabled * {
+  cursor: default !important;
+}
+
+/* Visual feedback for disabled state */
+.leaflet-container.dragging-disabled .leaflet-tile-pane {
+  opacity: 1;
+  /* transition: opacity 0.4s ease; */
+}
+
+.leaflet-container:not(.dragging-disabled) .leaflet-tile-pane {
+  opacity: 1;
+  /* transition: opacity 0.4s ease; */
+}
+
