@@ -477,7 +477,7 @@ const ContactUs = () => {
               {triggerApiSend && (
                 <FormHandler
                   formData={formData}
-                  apiEndpoint={`${process.env.REACT_APP_API_URL}/contact`}
+                  apiEndpoint={`${process.env.REACT_APP_API_URL}/users/contact`}
                   onSuccess={handleSuccess}
                   onError={handleError}
                   triggerSend={triggerApiSend}
