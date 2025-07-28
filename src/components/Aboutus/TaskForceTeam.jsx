@@ -166,8 +166,8 @@ const FacultyMembers = () => {
 
               {/* Faculty cards container */}
               {/* Faculty cards container */}
-              <div className="overflow-x-auto w-full">
-                <div className="flex w-max px-2 sm:px-4 md:px-6 mt-4">
+              <div className="overflow-x-hidden sm:overflow-x-auto md:overflow-x-hidden w-full">
+                <div className="flex sm:w-max md:w-full px-2 sm:px-4 md:px-6 mt-4">
                   {section.members.map((member, i) => (
                     <div
                       key={i}
