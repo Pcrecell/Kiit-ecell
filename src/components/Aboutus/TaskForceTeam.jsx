@@ -165,18 +165,23 @@ const FacultyMembers = () => {
               </div>
 
               {/* Faculty cards container */}
-              <div className="flex overflow-x-auto md:overflow-x-hidden mt-4 w-full px-2 sm:px-4 md:px-6">
-                {section.members.map((member, i) => (
-                  <div
-                    key={i}
-                    className="p-2 sm:p-3 md:p-4 flex-shrink-0"
-                  >
-                    <div className="border border-white rounded-bl-[14.21px] rounded-br-[14.21px] overflow-hidden w-[140px] sm:w-[180px] md:w-[220px] xl:w-[250px]">
-                      <FacultyCard member={member} />
+              {/* Faculty cards container */}
+              <div className="overflow-x-auto sm:overflow-x-auto md:overflow-x-hidden w-full">
+                <div className="flex w-max sm:w-full px-2 sm:px-4 md:px-6 mt-4">
+                  {section.members.map((member, i) => (
+                    <div
+                      key={i}
+                      className={`p-2 sm:p-3 md:p-4 flex-shrink-0 ${i === section.members.length - 1 ? "pr-6 sm:pr-8 md:pr-10" : ""
+                        }`}
+                    >
+                      <div className="border border-white rounded-bl-[14.21px] rounded-br-[14.21px] overflow-hidden w-[140px] sm:w-[180px] md:w-[220px] xl:w-[250px]">
+                        <FacultyCard member={member} />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
+
             </div>
           ))}
         </div>
