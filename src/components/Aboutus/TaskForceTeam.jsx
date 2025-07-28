@@ -165,7 +165,7 @@ const FacultyMembers = () => {
               </div>
 
               {/* Faculty cards container */}
-              <div className="flex overflow-x-hidden mt-4 w-full px-2 sm:px-4 md:px-6">
+              <div className="flex overflow-x-auto md:overflow-x-hidden mt-4 w-full px-2 sm:px-4 md:px-6">
                 {section.members.map((member, i) => (
                   <div
                     key={i}
