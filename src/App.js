@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import GalleryMaverick from "./components/EventGallery/GalleryMaverick";
 import GalleryESummit from "./components/EventGallery/GalleryESummit";
 import GalleryHultPrize from "./components/EventGallery/GalleryHultPrize";
@@ -53,6 +53,7 @@ function App() {
           <Route path="/gallery/life-at-ecell" element={<GalleryLifeAtEcell />} />
         </Routes>
       </PageTransition>
+      <SpeedInsights />
     </>
   );
 }
