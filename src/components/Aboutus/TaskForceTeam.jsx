@@ -38,7 +38,7 @@ const FacultyMembers = () => {
         {
           name: "Mr. Navendu Kar",
           role: "Corporate Liaisoning",
-          image: "https://ik.imagekit.io/qxzia1tvt/WhatsApp%20Image%202025-07-26%20at%2020.01.12_6d0e95c1.jpg",
+          image: "https://ik.imagekit.io/d73k0qzwc/images.png",
         },
         {
           name: "Mr. Mrityunjay Ray",

@@ -152,7 +152,7 @@ const AboutUsTopSection = () => {
       <section className="w-full min-h-screen flex flex-col justify-center items-center pr-0 pl-2 sm:px-4 md:pr-0 md:pl-5 py-8 sm:py-12 bg-gradient-to-b from-black via-gray-900 to-black md:pt-[10%]">
         <div className="max-w-7xl w-full mb-4 sm:mb-8">
           <h2 className="text-xl text-center md:text-right sm:text-2xl md:text-7xl font-bold mb-4 tracking-wide md:pr-8 lg:pr-16">
-            OUR HONBL’E FOUNDER SIR
+            OUR HONOURABLE FOUNDER SIR
           </h2>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-8 w-full">
