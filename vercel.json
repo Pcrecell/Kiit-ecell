@@ -10,21 +10,6 @@
       ],
       "destination": "https://kiitecell.org/$1",
       "permanent": true
-    },
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "kiitecell.org"
-        },
-        {
-          "type": "protocol",
-          "value": "http"
-        }
-      ],
-      "destination": "https://kiitecell.org/$1",
-      "permanent": true
     }
   ]
 }
