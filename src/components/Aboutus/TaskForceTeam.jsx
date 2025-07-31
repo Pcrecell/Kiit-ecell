@@ -18,7 +18,7 @@ const FacultyMembers = () => {
         {
           name: "Prof. Prachet Bhuyan",
           role: "Planning & Management",
-          image: "https://ik.imagekit.io/d73k0qzwc/Prachet-Bhuyan.jpg",
+          image: "https://ik.imagekit.io/ilgcom35w/prachet-sir.png?updatedAt=1753974456123",
         },
         {
           name: "Prof. Abhisek Ray",
@@ -38,12 +38,12 @@ const FacultyMembers = () => {
         {
           name: "Mr. Navendu Kar",
           role: "Corporate Liaisoning",
-          image: "https://ik.imagekit.io/d73k0qzwc/images.png",
+          image: "https://ik.imagekit.io/ilgcom35w/navendu-sir-enhanced.jpg?updatedAt=1753969913533",
         },
         {
           name: "Mr. Mrityunjay Ray",
           role: "Corporate Liaisoning",
-          image: "https://ik.imagekit.io/d73k0qzwc/images.png",
+          image: "https://ik.imagekit.io/1bsukh3d7/hassh.png?updatedAt=1753969117304",
         },
         {
           name: "Mr. Manish Verma",

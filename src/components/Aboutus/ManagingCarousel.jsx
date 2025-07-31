@@ -7,19 +7,19 @@ const managingBodyMembers = [
     id: 1,
     name: "Sarvagya Singh",
     designation: "Chairman",
-    imageUrl: "https://ik.imagekit.io/d73k0qzwc/sarvagya.png",
+    imageUrl: "https://ik.imagekit.io/ilgcom35w/sarvagya-bhaiya.jpg?updatedAt=1753971538969",
   },
   {
     id: 2,
     name: "Aman Kumar",
     designation: "Managing Director",
-    imageUrl: "https://ik.imagekit.io/d73k0qzwc/aman.png",
+    imageUrl: "https://ik.imagekit.io/fhervghik/E-Cell%20Website/upscalemedia-transformed.jpeg",
   },
   {
     id: 3,
     name: "Ayush Nayak",
     designation: "Human Resource Manager",
-    imageUrl: "https://ik.imagekit.io/d73k0qzwc/ayush.png",
+    imageUrl: "https://ik.imagekit.io/ilgcom35w/ayush-nayak-bhaiya.jpg?updatedAt=1753974111852",
   },
   {
     id: 4,
